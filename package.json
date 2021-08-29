@@ -1,0 +1,12 @@
+{
+  "name": "discord-moment",
+  "version": "1.0.0",
+  "description": "Discord Moment allows you to easily format dates and times in Discord's markdown format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "DanPlayz0",
+  "license": "MIT"
+}
