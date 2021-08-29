@@ -7,7 +7,7 @@ class DiscordMoment {
     if(new Date(date).getTime() === 'Invalid Date') throw Error(`Invalid Date: ${date}`);
     if(typeof type !== 'string') throw TypeError('type must be a string');
     if(!/^[tTdDfFR]$/.test(type)) throw new TypeError(`Invalid style: ${type}`);
-    return `<t:${Math.round(new Date(date).getTime()/1000)}:${type}>`;
+    return "<t:" + Math.round(new Date(date).getTime()/1000) + ":" + type + ">";
   }
 }
 
