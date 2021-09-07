@@ -13,21 +13,13 @@ class DiscordMoment {
   }
 
   format(date = Date.now(), type = "f") {
-    if (new Date(date).getTime() === "Invalid Date")
-      throw Error(`Invalid Date: ${date}`);
+    if (new Date(date).getTime() === "Invalid Date") throw Error(`Invalid Date: ${date}`);
     if (typeof type !== "string") throw TypeError("type must be a string");
-    if (
-      !/^[tTdDfFR]$/.test(type) ||
-      !Object.keys(this.longhand).includes(type.toLowerCase())
-    )
-      throw new TypeError(`Invalid style: ${type}`);
+    if (!/^[tTdDfFR]$/.test(type) && !Object.keys(this.longhand).includes(type.toLowerCase()))throw new TypeError(`Invalid style: ${type}`);
     return `<t:${Math.round(new Date(date).getTime() / 1000)}:${this.longhand[type.toLowerCase().replace(/[-_]/gi, " ")] || type }>`;
   }
 }
 
 const instance = new DiscordMoment();
-for (const key of Object.getOwnPropertyNames(
-  Object.getPrototypeOf(instance)
-).filter((k) => k !== "constructor"))
-  DiscordMoment[key] = instance[key];
+for (const key of Object.getOwnPropertyNames(Object.getPrototypeOf(instance)).filter((k) => k !== "constructor"))DiscordMoment[key] = instance[key];
 module.exports = DiscordMoment;
