@@ -17,18 +17,19 @@ npm install discord-moment
 const discordmoment = require('discord-moment');
 
 discordmoment.format('2021-04-20T16:20:00.000Z', 't'); // 16:20
-discordmoment.format('2021-04-20T16:20:00.000Z', 'Short time'); // 16:20
 discordmoment.format('2021-04-20T16:20:00.000Z', 'T'); // 16:20:30
-discordmoment.format('2021-04-20T16:20:00.000Z', 'Long time'); // 16:20:30
 discordmoment.format('2021-04-20', 'd'); // 20/04/2021
-discordmoment.format('2021-04-20', 'Short date'); // 20/04/2021
 discordmoment.format('2021-04-20', 'D'); // 20 April 2021
-discordmoment.format('2021-04-20', 'Long date'); // 20 April 2021
 discordmoment.format('2021-04-20T16:20:00.000Z', 'f'); // 20 April 2021 16:20
-discordmoment.format('2021-04-20T16:20:00.000Z', 'Short date/time'); // 20 April 2021 16:20
 discordmoment.format('2021-04-20T16:20:00.000Z', 'F'); // Tuesday, 20 April 2021 16:20
-discordmoment.format('2021-04-20T16:20:00.000Z', 'Long date/time'); // Tuesday, 20 April 2021 16:20
 discordmoment.format('2021-04-20T16:20:00.000Z', 'R'); // 2 months ago
+
+discordmoment.format('2021-04-20T16:20:00.000Z', 'Short time'); // 16:20
+discordmoment.format('2021-04-20T16:20:00.000Z', 'Long time'); // 16:20:30
+discordmoment.format('2021-04-20', 'Short date'); // 20/04/2021
+discordmoment.format('2021-04-20', 'Long date'); // 20 April 2021
+discordmoment.format('2021-04-20T16:20:00.000Z', 'Short date/time'); // 20 April 2021 16:20
+discordmoment.format('2021-04-20T16:20:00.000Z', 'Long date/time'); // Tuesday, 20 April 2021 16:20
 discordmoment.format('2021-04-20T16:20:00.000Z', 'Relative'); // 2 months ago
 
 discordmoment.format(Date.now(), 'R'); // a few seconds ago
