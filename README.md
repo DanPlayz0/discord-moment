@@ -34,7 +34,7 @@ discordmoment.format('2021-04-20T16:20:00.000Z', 'Relative'); // 2 months ago
 discordmoment.format(Date.now(), 'R'); // a few seconds ago
 ```
 
-## Styles
+## Styles [🔗](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles)
 
 | Style | Description                  | Example Output               |
 |:-----:|------------------------------|------------------------------|
